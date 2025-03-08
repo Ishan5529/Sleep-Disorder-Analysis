@@ -1,0 +1,101 @@
+,SID,AGE,GENDER,BMI,OAHI,AHI,Mean_SaO2,Arousal Index,MEDICAL_HISTORY,Sleep_Disorders,disorders
+0,S002,65.9,M,27.0,19,19,91%,98,"Asthma, Body Pain, GERD, Hypertension, Sleep Apnea",OSA,{'OSA'}
+1,S003,29.38,F,51.0,34,37,95%,28,None,"snoring, sleep apnea, difficulty breathing, snorts","{'SNORING', 'DIFFICULTY BREATHING', 'SLEEP APNEA'}"
+2,S004,55.66,F,41.0,63,99,89%,109,"Arrhythmia, Body Pain, Depression, Dyspnea, GERD",difficulty breathing,{'DIFFICULTY BREATHING'}
+3,S005,49.12,F,43.0,19,20,95%,28,"Asthma, Body Pain, Depression, Diabetes, Dyspnea, GERD, Sleep Apnea",OSA,{'OSA'}
+4,S006,36.91,F,22.0,4,5,97%,34,"Depression, Sleep Apnea",OSA,{'OSA'}
+5,S007,86.13,F,34.0,14,15,87%,54,"CAD, Diabetes, GERD, Hypertension, Sleep Apnea",OSA,{'OSA'}
+6,S008,62.38,M,30.0,47,48,93%,47,None,OSA,{'OSA'}
+7,S009,67.03,M,27.0,8,21,98%,35,"Asthma, Body Pain, Hypertension",OSA,{'OSA'}
+8,S010,50.62,F,31.0,13,13,97%,25,"Body Pain, Depression, Dyspnea","difficulty staying asleep, snoring, difficulty breathing","{'SNORING', 'INSOMNIA', 'DIFFICULTY BREATHING'}"
+9,S011,38.56,M,32.0,2,2,97%,26,"Anxiety, Arrhythmia",OSA,{'OSA'}
+10,S012,72.89,F,29.0,2,7,96%,46,Asthma,OSA,{'OSA'}
+11,S013,40.07,M,41.0,4,9,91%,3,None,H/O OSA,"{'HYPERSOMNIA', 'OSA'}"
+12,S014,51.94,F,32.0,20,21,96%,44,"Anxiety, Asthma, Body Pain, CAD, Depression, Diabetes, GERD, Hypertension, Migraine","snoring, snort, RLS","{'SNORING', 'RLS'}"
+13,S015,26.63,F,30.0,1,1,96%,18,"Depression, Diabetes",Chronic fatigue,{'CHRONIC FATIGUE'}
+14,S016,73.81,M,38.0,34,34,95%,25,"Arrhythmia, Body Pain, CAD, Depression, GERD, Hypertension","EDS, RBD","{'EDS', 'RBD'}"
+15,S017,58.08,M,32.0,9,30,96%,47,"Hypertension, Sleep Apnea",sleep apnea,{'SLEEP APNEA'}
+16,S018,63.73,F,32.0,6,6,94%,16,"Depression, GERD","EDS, snoring","{'EDS', 'SNORING'}"
+17,S019,74.9,M,33.0,3,4,95%,56,"Depression, GERD, Hypertension","OSA, EDS, snoring","{'EDS', 'SNORING', 'OSA'}"
+18,S020,24.48,F,24.0,22,22,97%,43,Migraine,hypersomnia,{'HYPERSOMNIA'}
+19,S021,62.0,M,29.0,1,4,98%,83,"Arrhythmia, Diabetes, Hypertension, Sleep Apnea",OSA,{'OSA'}
+20,S022,75.0,M,33.0,10,11,92%,13,"Anxiety, Arrhythmia, Asthma, Body Pain, CAD, Depression, Diabetes, GERD, Hypertension, Sleep Apnea","OSA, snoring, difficulty breathing, snort, RLS, grind teeth","{'BRUXISM', 'SNORING', 'DIFFICULTY BREATHING', 'RLS', 'OSA'}"
+21,S023,52.0,F,33.0,6,6,96%,24,"Body Pain, Hypertension","snoring, sleep apnea","{'SNORING', 'SLEEP APNEA'}"
+22,S024,69.2,M,28.0,1,1,93%,8,"Depression, Hypertension","difficulty breathing, snoring, sleep apnea, RLS, EDS","{'EDS', 'SNORING', 'DIFFICULTY BREATHING', 'RLS', 'SLEEP APNEA'}"
+23,S025,64.53,F,39.0,15,15,95%,20,"Depression, Diabetes, GERD, Hypertension","EDS, snoring","{'EDS', 'SNORING'}"
+24,S026,60.97,F,42.0,24,24,91%,13,Hypertension,"snoring, snort",{'SNORING'}
+25,S027,63.0,F,32.0,8,8,93%,47,"Body Pain, Depression, Dyspnea",Insomnia,{'INSOMNIA'}
+26,S028,62.84,F,27.0,31,31,95%,42,None,MCI and Sleep apnea,"{'SLEEP APNEA', 'MCI'}"
+27,S029,77.69,F,23.0,1,2,91%,39,"Anxiety, Asthma, Depression, Hypertension, Migraine","EDS, fatigue, snoring","{'EDS', 'SNORING', 'FATIGUE'}"
+28,S030,41.47,M,24.0,21,21,98%,79,"Arrhythmia, Hypertension, Sleep Apnea","snoring, difficulty breathing, snort, morning headaches, grind teeth","{'SNORING', 'DIFFICULTY BREATHING', 'MORNING HEADACHES', 'BRUXISM'}"
+29,S031,30.37,F,43.0,43,43,91%,25,None,Snoring,{'SNORING'}
+30,S032,75.76,F,30.0,22,22,92%,66,"Anxiety, Body Pain, CAD, Diabetes, GERD, Hypertension","EDS, snoring","{'EDS', 'SNORING'}"
+31,S033,43.48,M,34.0,2,2,95%,27,None,"EDS, snoring","{'EDS', 'SNORING'}"
+32,S034,25.0,M,29.0,5,5,97%,6,Migraine,"snoring, sleep apnea, morning headaches, RLS","{'SNORING', 'RLS', 'MORNING HEADACHES', 'SLEEP APNEA'}"
+33,S035,45.0,M,39.0,46,46,88%,20,"CAD, Diabetes, Hypertension",Snoring,{'SNORING'}
+34,S036,21.23,F,25.0,1,1,98%,18,"Anxiety, Arrhythmia, Body Pain","morning headaches, bruxism, EDS","{'EDS', 'MORNING HEADACHES', 'BRUXISM'}"
+35,S037,77.73,M,25.5,2,29,95%,65,"GERD, Hypertension, Sleep Apnea",sleep apnea,{'SLEEP APNEA'}
+36,S038,70.0,M,28.0,9,20,97%,24,"Depression, Hypertension",sleep apnea,{'SLEEP APNEA'}
+37,S039,79.0,M,30.0,2,8,97%,28,"Arrhythmia, Hypertension, Sleep Apnea","OSA, sleep apnea","{'SLEEP APNEA', 'OSA'}"
+38,S040,25.0,F,33.0,6,6,96%,31,"Anxiety, Asthma, Depression","sleep apnea, difficulty breathing, bruxism, EDS, RLS","{'BRUXISM', 'EDS', 'DIFFICULTY BREATHING', 'RLS', 'SLEEP APNEA'}"
+39,S042,33.57,F,39.0,0,0,96%,21,"Asthma, Depression","snoring, EDS, difficulty breathing, morning headaches, RLS, grind teeth","{'BRUXISM', 'EDS', 'MORNING HEADACHES', 'SNORING', 'DIFFICULTY BREATHING', 'RLS'}"
+40,S043,79.91,M,25.0,10,13,95%,23,"Body Pain, Depression",Snoring,{'SNORING'}
+41,S044,59.16,M,27.0,10,10,97%,23,GERD,Snoring,{'SNORING'}
+42,S045,42.82,M,32.0,5,7,96%,32,Hypertension,OSA,{'OSA'}
+43,S046,37.0,F,58.0,178,182,77%,109,None,"EDS, morning headaches, snoring, sleep apnea, snort","{'EDS', 'SNORING', 'MORNING HEADACHES', 'SLEEP APNEA'}"
+44,S047,74.0,F,33.0,75,76,90%,36,"Anxiety, Asthma, Depression, Diabetes, Hypertension, Sleep Apnea",OSA,{'OSA'}
+45,S048,45.0,F,55.0,7,7,94%,6,"Depression, Diabetes, GERD, Hypertension, Sleep Apnea",OSA,{'OSA'}
+46,S049,51.0,F,46.0,4,4,91%,3,"Anxiety, GERD, Hypertension",None,{'NONE'}
+47,S050,71.59,F,30.0,3,3,94%,20,"Body Pain, Hypertension",EDS,{'EDS'}
+48,S051,75.82,F,30.0,1,1,99%,25,"Depression, Diabetes, Hypertension, Sleep Apnea",OSA,{'OSA'}
+49,S052,30.14,M,32.0,6,6,96%,28,Body Pain,None,{'NONE'}
+50,S053,38.61,F,32.0,18,20,98%,28,"Anxiety, Asthma, Body Pain, Depression, Migraine",sleep apnea,{'SLEEP APNEA'}
+51,S054,60.41,F,37.0,24,24,93%,43,"Anxiety, Arrhythmia, Asthma, Depression, Diabetes, Dyspnea, GERD, Hypertension, Sleep Apnea",OSA,{'OSA'}
+52,S055,79.48,M,28.0,3,5,94%,86,"CAD, Depression, Hypertension, Sleep Apnea","OSA, RLS","{'RLS', 'OSA'}"
+53,S056,69.3,F,37.0,8,8,96%,41,None,OSA,{'OSA'}
+54,S057,50.0,M,43.0,1,3,93%,28,"Dyspnea, Hypertension","sleep apnea, EDS","{'EDS', 'SLEEP APNEA'}"
+55,S058,75.0,M,29.0,52,64,93%,81,"Body Pain, CAD, Depression, GERD, Hypertension",snoring,{'SNORING'}
+56,S059,49.0,F,38.0,127,127,88%,132,None,sleep apnea,{'SLEEP APNEA'}
+57,S061,64.05,F,18.0,35,37,93%,49,"Asthma, Depression, Diabetes","snoring, sleep apnea, diffifulty breathing, snorts, RLS, EDS","{'EDS', 'SNORING', 'DIFFICULTY BREATHING', 'RLS', 'SLEEP APNEA'}"
+58,S062,38.67,F,72.0,115,115,90%,39,"Body Pain, Diabetes, GERD, Hypertension, Migraine, Sleep Apnea","snoring, sleep apnea, diffifulty breathing, snorts, RLS, EDS","{'EDS', 'SNORING', 'DIFFICULTY BREATHING', 'RLS', 'SLEEP APNEA'}"
+59,S063,44.91,F,20.0,2,2,93%,40,Asthma,EDS,{'EDS'}
+60,S064,52.71,M,35.0,37,37,94%,58,"GERD, Hypertension","snoring, EDS","{'SNORING', 'EDS'}"
+61,S065,60.07,F,32.0,1,1,96%,19,"Body Pain, Hypertension",EDS,{'EDS'}
+62,S066,70.63,F,31.0,1,1,95%,13,"Anxiety, Depression, Dyspnea, Sleep Apnea",OSA,{'OSA'}
+63,S067,75.14,M,31.0,2,2,91%,16,"Anxiety, Asthma, Body Pain, Depression, Dyspnea",OSA,{'OSA'}
+64,S068,38.47,M,58.0,30,30,94%,26,"Depression, Hypertension","EDS, snort, difficulty breathing, RLS","{'EDS', 'SNORING', 'DIFFICULTY BREATHING', 'RLS'}"
+65,S069,53.94,F,40.0,19,19,96%,27,Hypertension,None,{'NONE'}
+66,S070,55.07,F,31.0,32,33,94%,20,"Anxiety, Body Pain",None,{'NONE'}
+67,S071,59.41,M,41.0,65,70,92%,51,"Body Pain, Dyspnea, Hypertension",OSA,{'OSA'}
+68,S072,67.6,M,33.0,68,69,94%,90,"Anxiety, Depression, Hypertension","OSA snoring, difficulty breathing, morning headaches, snorts, EDS","{'EDS', 'MORNING HEADACHES', 'SNORING', 'DIFFICULTY BREATHING', 'OSA'}"
+69,S073,36.0,F,35.0,14,14,95%,27,"Anxiety, Asthma, Body Pain, Depression","EDS, difficulty breathing, morning headaches, snorts, RLS, EDS, bruxism","{'BRUXISM', 'EDS', 'MORNING HEADACHES', 'SNORING', 'DIFFICULTY BREATHING', 'RLS'}"
+70,S074,59.91,F,23.0,5,5,95%,11,"Anxiety, Body Pain, Depression","OSA, snoring, sleep apnea, morning headaches, RLS, EDS","{'EDS', 'MORNING HEADACHES', 'SNORING', 'RLS', 'SLEEP APNEA', 'OSA'}"
+71,S075,72.08,F,25.0,0,0,94%,19,"Arrhythmia, Diabetes, Hypertension, Sleep Apnea",Sleep apnea,{'SLEEP APNEA'}
+72,S076,62.89,F,35.0,2,2,95%,10,"Anxiety, Body Pain, Depression, GERD","RLS, difficulty breathing, EDS, snoring, bruxism","{'BRUXISM', 'EDS', 'SNORING', 'DIFFICULTY BREATHING', 'RLS'}"
+73,S077,57.02,F,27.0,5,6,94%,9,"Asthma, Body Pain, Hypertension",snoring,{'SNORING'}
+74,S078,58.23,M,40.0,1,6,92%,21,"Anxiety, Body Pain, Depression",OSA,{'OSA'}
+75,S079,42.47,M,29.0,27,29,95%,19,None,None,{'NONE'}
+76,S080,21.29,M,44.0,11,12,97%,16,"Body Pain, Dyspnea",EDS,{'EDS'}
+77,S081,55.35,M,37.0,17,18,94%,32,"Anxiety, Hypertension","OSA, morning headaches, RLS","{'RLS', 'MORNING HEADACHES', 'OSA'}"
+78,S082,72.59,F,37.0,0,0,90%,91,Depression,"EDS, snoring, morning headaches, snorts, grinds teeth","{'EDS', 'SNORING', 'MORNING HEADACHES', 'BRUXISM'}"
+79,S083,82.99,M,32.0,7,50,95%,55,"Diabetes, GERD, Hypertension",snoring,{'SNORING'}
+80,S084,44.97,M,32.0,1,1,95%,11,"Anxiety, Body Pain","OSA, snoring, difficulty breathing, snorts","{'SNORING', 'DIFFICULTY BREATHING', 'OSA'}"
+81,S085,76.69,M,29.0,1,1,95%,3,"Depression, Hypertension","snoring, EDS","{'SNORING', 'EDS'}"
+82,S086,65.7,M,23.0,4,4,97%,56,"Anxiety, Body Pain, Depression, Sleep Apnea","snore, difficulty breathing, snorts","{'SNORING', 'DIFFICULTY BREATHING'}"
+83,S087,55.06,M,24.0,0,7,96%,14,Anxiety,EDS,{'EDS'}
+84,S088,76.91,F,34.0,28,28,84%,42,None,none,{'NONE'}
+85,S089,40.07,M,36.0,27,33,94%,69,None,"snore, sleep apnea","{'SNORING', 'SLEEP APNEA'}"
+86,S090,86.93,M,31.0,1,2,95%,57,"Arrhythmia, Body Pain, CAD, Diabetes, Hypertension, Sleep Apnea","OSA, sleep apnea","{'SLEEP APNEA', 'OSA'}"
+87,S091,51.01,M,31.0,9,10,95%,38,"Anxiety, Body Pain, Hypertension",OSA,{'OSA'}
+88,S092,53.46,F,41.0,21,21,94%,28,None,none,{'NONE'}
+89,S093,41.13,F,42.0,17,17,93%,29,"Anxiety, Hypertension","snoring, difficulty breathing, snorts, RLS, EDS","{'SNORING', 'RLS', 'DIFFICULTY BREATHING', 'EDS'}"
+90,S094,73.07,M,28.0,35,49,94%,58,"Anxiety, Diabetes, Hypertension",EDS,{'EDS'}
+91,S095,35.07,F,35.0,0,0,95%,73,"Anxiety, Asthma, Depression",EDS,{'EDS'}
+92,S096,31.62,F,53.0,29,29,95%,55,Hypertension,"snoring, EDS, snorts, headache","{'SNORING', 'EDS', 'HEADACHE'}"
+93,S097,73.6,F,26.0,24,33,93%,31,"CAD, Hypertension, Migraine, Sleep Apnea","EDS, sleep apnea","{'EDS', 'SLEEP APNEA'}"
+94,S098,66.13,F,37.0,23,23,95%,25,"Anxiety, Body Pain, GERD, Hypertension",None,{'NONE'}
+95,S099,59.92,M,26.0,31,31,94%,68,"Body Pain, CAD, GERD, Sleep Apnea","OSA, difficulty breathing, morning headaches","{'DIFFICULTY BREATHING', 'MORNING HEADACHES', 'OSA'}"
+96,S100,59.89,F,28.0,25,25,95%,20,"Body Pain, GERD","snoring, RLS, sleep apnea, EDS","{'SNORING', 'RLS', 'EDS', 'SLEEP APNEA'}"
+97,S101,38.02,F,39.0,1,2,99%,20,"Diabetes, Hypertension",H/O OSA,"{'HYPERSOMNIA', 'OSA'}"
+98,S102,57.44,M,26.0,18,24,95%,43,"Asthma, Depression, GERD, Migraine, Sleep Apnea","RLS, OSA","{'RLS', 'OSA'}"
+99,S103,64.07,F,32.0,36,37,93%,49,"Body Pain, Dyspnea, Hypertension",snoring,{'SNORING'}
