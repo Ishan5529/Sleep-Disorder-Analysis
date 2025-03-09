@@ -2,6 +2,7 @@
 const cards = document.getElementsByClassName('card');
 const home = document.getElementById('home');
 const card = document.getElementById('card-expanded');
+const loader = document.getElementById('loading');
 
 // Buttons
 const backBtn = document.getElementById('back');
@@ -11,6 +12,8 @@ const contributeBtn = document.getElementById('contribute');
 const contactBtn = document.getElementById('contact');
 
 // Event Listeners
+window.onload = hideLoader;
+
 backBtn.addEventListener('click', () => {
     card.classList.remove('visible-card');
     card.classList.add('hidden');
@@ -45,4 +48,13 @@ function expand(title, text, vidUrl) {
     card.classList.remove('hidden');
     home.classList.add('hidden');
     card.classList.add('visible-card');
+}
+
+function hideLoader() {
+    setTimeout(() => {
+        loader.style.cssText = "opacity: 0; transition: opacity 0.7s ease-in-out;";
+        setTimeout(() => {
+            loader.style.cssText = "display: none;";
+        }, 700);
+    }, 7500);
 }

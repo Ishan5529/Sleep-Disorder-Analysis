@@ -21,6 +21,19 @@
     font-family: 'Gilroy-Bold', sans-serif;
 }
 
+#loading {
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     background-color: #3273C9;
     display: flex;
