@@ -1,18 +1,23 @@
 // Containers & Cards
 const cards = document.getElementsByClassName('card');
 const home = document.getElementById('home');
+const about = document.getElementById('about');
+const contribute = document.getElementById('contribute');
+const contact = document.getElementById('contact');
 const card = document.getElementById('card-expanded');
 const loader = document.getElementById('loading');
 
 // Buttons
 const backBtn = document.getElementById('back');
-const homeBtn = document.getElementById('home');
-const aboutBtn = document.getElementById('about');
-const contributeBtn = document.getElementById('contribute');
-const contactBtn = document.getElementById('contact');
+const homeBtns = document.getElementsByClassName('home');
+const aboutBtns = document.getElementsByClassName('about');
+const contributeBtns = document.getElementsByClassName('contribute');
+const contactBtns = document.getElementsByClassName('contact');
 
 // Event Listeners
-window.onload = hideLoader;
+window.onload = () => {
+    hideLoader();
+};
 
 backBtn.addEventListener('click', () => {
     card.classList.remove('visible-card');
@@ -20,6 +25,68 @@ backBtn.addEventListener('click', () => {
     home.classList.remove('hidden');
 });
 
+for (let btn of homeBtns) {
+    btn.addEventListener('click', () => {
+        if (contact.classList.contains('visible-main-card'))
+            timer = 500;
+        contact.classList.remove('visible-main-card');
+        if (contribute.classList.contains('visible-main-card'))
+            timer = timer + 500;
+        setTimeout(()=>contribute.classList.remove('visible-main-card'), timer - 500);
+        setTimeout(()=>about.classList.remove('visible-main-card'), timer);
+        timer = 0;
+        contribute.classList.add('hidden');
+        about.classList.add('hidden');
+        contact.classList.add('hidden');
+        home.classList.remove('hidden');
+    });
+}
+
+for (let btn of aboutBtns) {
+    btn.addEventListener('click', () => {
+    about.classList.remove('hidden');
+    home.classList.add('hidden');
+    contribute.classList.add('hidden');
+    contact.classList.add('hidden');
+    if (contact.classList.contains('visible-main-card'))
+        timer = 500;
+    contact.classList.remove('visible-main-card');
+    if (contribute.classList.contains('visible-main-card'))
+        timer = timer + 500;
+    setTimeout(() => contribute.classList.remove('visible-main-card'), timer - 500);
+    setTimeout(() => about.classList.add('visible-main-card'), timer);
+    timer = 0;
+    });
+}
+
+for (let btn of contributeBtns) {
+    btn.addEventListener('click', () => {
+    contribute.classList.remove('hidden');
+    home.classList.add('hidden');
+    about.classList.add('hidden');
+    contact.classList.add('hidden');
+    if (contact.classList.contains('visible-main-card'))
+        timer = 500;
+    contact.classList.remove('visible-main-card');
+    setTimeout(() => contribute.classList.add('visible-main-card'), timer);
+    timer = 0;
+    });
+}
+
+for (let btn of contactBtns) {
+    btn.addEventListener('click', () => {
+    contact.classList.remove('hidden');
+    home.classList.add('hidden');
+    about.classList.add('hidden');
+    contribute.classList.add('hidden');
+    contact.classList.add('visible-main-card');
+    });
+}
+
+// Variables
+let timer = 0;
+
+// Constants
 const text = {
     'Insomnia': 'Insomnia is a sleep disorder characterized by persistent difficulty with sleep initiation, maintenance, or early morning awakenings, despite adequate opportunity for sleep. It is associated with daytime impairment, including fatigue, cognitive dysfunction, mood disturbances, and decreased performance. Etiologies include psychological stress, anxiety disorders, circadian rhythm disruptions, and underlying medical conditions. Management involves cognitive behavioral therapy for insomnia (CBT-I), sleep hygiene modifications, and pharmacological interventions when necessary.',
     'Sleep Apnea': 'Sleep apnea is a sleep disorder causing repeated breathing interruptions during sleep. It occurs in two main types: obstructive sleep apnea (OSA), due to airway blockage, and central sleep apnea (CSA), caused by brain signal dysfunction. Symptoms include loud snoring, gasping for air, and daytime sleepiness. Risk factors include obesity, age, and anatomical abnormalities. Treatment includes CPAP therapy, lifestyle changes, and, in severe cases, surgery. '
