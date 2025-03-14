@@ -1,3 +1,20 @@
+// Variables
+let timer = 0;
+let title;
+
+// Constants
+const pageStack = [];
+const page1 = document.getElementById('aboutPage1');
+const text = {
+    'Insomnia': 'Insomnia is a sleep disorder characterized by persistent difficulty with sleep initiation, maintenance, or early morning awakenings, despite adequate opportunity for sleep. It is associated with daytime impairment, including fatigue, cognitive dysfunction, mood disturbances, and decreased performance. Etiologies include psychological stress, anxiety disorders, circadian rhythm disruptions, and underlying medical conditions. Management involves cognitive behavioral therapy for insomnia (CBT-I), sleep hygiene modifications, and pharmacological interventions when necessary.',
+    'Sleep Apnea': 'Sleep apnea is a sleep disorder causing repeated breathing interruptions during sleep. It occurs in two main types: obstructive sleep apnea (OSA), due to airway blockage, and central sleep apnea (CSA), caused by brain signal dysfunction. Symptoms include loud snoring, gasping for air, and daytime sleepiness. Risk factors include obesity, age, and anatomical abnormalities. Treatment includes CPAP therapy, lifestyle changes, and, in severe cases, surgery. '
+};
+
+const vidUrl = {
+    'Insomnia': `sources\\insomnia_animation.gif`,
+    'Sleep Apnea': `sources\\sleep_apnea_animation.gif`
+};
+
 // Containers & Cards
 const cards = document.getElementsByClassName('card');
 const home = document.getElementById('home');
@@ -6,6 +23,9 @@ const contribute = document.getElementById('contribute');
 const contact = document.getElementById('contact');
 const card = document.getElementById('card-expanded');
 const loader = document.getElementById('loading');
+const aboutPages = document.getElementsByClassName('aboutPage');
+const contributePages = document.getElementsByClassName('contributePage');
+const contactPages = document.getElementsByClassName('contactPage');
 
 // Buttons
 const backBtn = document.getElementById('back');
@@ -24,6 +44,10 @@ backBtn.addEventListener('click', () => {
     card.classList.add('hidden');
     home.classList.remove('hidden');
 });
+
+for (const card of cards) {
+    card.addEventListener('click', () => expand(card.querySelector('h1').innerText, text, vidUrl));
+}
 
 for (let btn of homeBtns) {
     btn.addEventListener('click', () => {
@@ -83,25 +107,9 @@ for (let btn of contactBtns) {
     });
 }
 
-// Variables
-let timer = 0;
-
-// Constants
-const text = {
-    'Insomnia': 'Insomnia is a sleep disorder characterized by persistent difficulty with sleep initiation, maintenance, or early morning awakenings, despite adequate opportunity for sleep. It is associated with daytime impairment, including fatigue, cognitive dysfunction, mood disturbances, and decreased performance. Etiologies include psychological stress, anxiety disorders, circadian rhythm disruptions, and underlying medical conditions. Management involves cognitive behavioral therapy for insomnia (CBT-I), sleep hygiene modifications, and pharmacological interventions when necessary.',
-    'Sleep Apnea': 'Sleep apnea is a sleep disorder causing repeated breathing interruptions during sleep. It occurs in two main types: obstructive sleep apnea (OSA), due to airway blockage, and central sleep apnea (CSA), caused by brain signal dysfunction. Symptoms include loud snoring, gasping for air, and daytime sleepiness. Risk factors include obesity, age, and anatomical abnormalities. Treatment includes CPAP therapy, lifestyle changes, and, in severe cases, surgery. '
-};
-
-const vidUrl = {
-    'Insomnia': `sources\\insomnia_animation.gif`,
-    'Sleep Apnea': `sources\\sleep_apnea_animation.gif`
-};
-
-let title;
-
-for (const card of cards) {
-    card.addEventListener('click', () => expand(card.querySelector('h1').innerText, text, vidUrl));
-}
+scrollAnimation(aboutPages, about, pageStack);
+scrollAnimation(contributePages, contribute, pageStack);
+scrollAnimation(contactPages, contact, pageStack);
 
 // Functions
 function expand(title, text, vidUrl) {
@@ -115,6 +123,48 @@ function expand(title, text, vidUrl) {
     card.classList.remove('hidden');
     home.classList.add('hidden');
     card.classList.add('visible-card');
+}
+
+function push(stack, element) {
+    stack.push(element);
+}
+
+function pop(stack) {
+    return stack.pop();
+}
+
+function peek(stack) {
+    return stack[stack.length - 1];
+}
+
+function scrollAnimation(pages, container, stack) {
+    for (let page = 0; page < pages.length; page++) {
+        pages[page].addEventListener('wheel', (event) => {
+            if (event.deltaY > 0) { // Scrolling down
+                if (pages[page + 1] && !stack.includes(pages[page + 1])) {
+                    push(stack, pages[page + 1]);
+                    pages[page + 1].classList.add('visible-card');
+                    pages[page + 1].classList.add('ultra-index');
+                    pages[page].classList.remove('ultra-index');
+                }
+            } else if (event.deltaY < 0) { // Scrolling up
+                if (pages[page] && stack.includes(pages[page])) {
+                    let removed = pop(stack);
+                    removed.classList.remove('visible-card');
+                }
+            }
+        });
+    }
+    
+    let page1 = pages[0];
+    container.addEventListener('wheel', (event) => {
+        if (event.deltaY > 0) { // Scrolling down
+            if (!stack.includes(page1)) {
+                push(stack, page1);
+                page1.classList.add('visible-card');
+            }
+        }
+    });
 }
 
 function hideLoader() {

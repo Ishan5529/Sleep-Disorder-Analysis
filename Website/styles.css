@@ -203,6 +203,10 @@ body {
     z-index: 2;
 }
 
+.ultra-index {
+    z-index: 90;
+}
+
 .visible-card {
     transform: translateY(0);
     transform: translateX(0);
