@@ -1,6 +1,7 @@
 // Variables
 let timer = 0;
 let title;
+let flag = false;
 
 // Constants
 const pageStack = [];
@@ -21,6 +22,7 @@ const home = document.getElementById('home');
 const about = document.getElementById('about');
 const contribute = document.getElementById('contribute');
 const contact = document.getElementById('contact');
+const test = document.getElementById('test');
 const card = document.getElementById('card-expanded');
 const loader = document.getElementById('loading');
 const aboutPages = document.getElementsByClassName('aboutPage');
@@ -34,6 +36,7 @@ const homeBtns = document.getElementsByClassName('home');
 const aboutBtns = document.getElementsByClassName('about');
 const contributeBtns = document.getElementsByClassName('contribute');
 const contactBtns = document.getElementsByClassName('contact');
+const testBtns = document.getElementsByClassName('test-btn');
 
 // Event Listeners
 window.onload = () => {
@@ -46,12 +49,43 @@ backBtn.addEventListener('click', () => {
     home.classList.remove('hidden');
 });
 
+for (let btn of testBtns) {
+    btn.addEventListener('click', () => {
+        let localTimer = (pageStack.length * 500) + tabTime();
+        reset();
+        setTimeout(() => {
+            test.classList.remove('hidden');
+            home.classList.add('hidden');
+            test.classList.add('visible-main-card');}, localTimer);
+    });
+}
+
+function tabTime() {
+    let superLocalTimer = 0;
+    if (about.classList.contains('visible-main-card'))
+        superLocalTimer += 500;
+    if (contribute.classList.contains('visible-main-card'))
+        superLocalTimer += 500;
+    if (contact.classList.contains('visible-main-card'))
+        superLocalTimer += 500;
+    console.log(superLocalTimer);
+    return superLocalTimer;
+}
+
+function reset() {
+    let localTimer = pageStack.length * 500;
+    topBtns[0].click();
+    setTimeout(() => homeBtns[1].click(), localTimer);
+}
+
 for (const card of cards) {
     card.addEventListener('click', () => expand(card.querySelector('h1').innerText, text, vidUrl));
 }
 
 for (let btn of homeBtns) {
     btn.addEventListener('click', () => {
+        if (test.classList.contains('visible-main-card'))
+            test.classList.remove('visible-main-card');
         if (contact.classList.contains('visible-main-card'))
             timer = 500;
         contact.classList.remove('visible-main-card');
@@ -60,6 +94,7 @@ for (let btn of homeBtns) {
         setTimeout(()=>contribute.classList.remove('visible-main-card'), timer - 500);
         setTimeout(()=>about.classList.remove('visible-main-card'), timer);
         timer = 0;
+        test.classList.add('hidden');
         contribute.classList.add('hidden');
         about.classList.add('hidden');
         contact.classList.add('hidden');
@@ -69,42 +104,65 @@ for (let btn of homeBtns) {
 
 for (let btn of aboutBtns) {
     btn.addEventListener('click', () => {
-    about.classList.remove('hidden');
-    home.classList.add('hidden');
-    contribute.classList.add('hidden');
-    contact.classList.add('hidden');
-    if (contact.classList.contains('visible-main-card'))
-        timer = 500;
-    contact.classList.remove('visible-main-card');
-    if (contribute.classList.contains('visible-main-card'))
-        timer = timer + 500;
-    setTimeout(() => contribute.classList.remove('visible-main-card'), timer - 500);
-    setTimeout(() => about.classList.add('visible-main-card'), timer);
-    timer = 0;
+        let localTimer = 0;
+        if (test.classList.contains('visible-main-card')) {
+            test.classList.remove('visible-main-card');
+            localTimer = 500;
+        }
+        setTimeout(() => {
+            about.classList.remove('hidden');
+            home.classList.add('hidden');
+            contribute.classList.add('hidden');
+            contact.classList.add('hidden');
+            test.classList.add('hidden');
+            if (contact.classList.contains('visible-main-card'))
+                timer = 500;
+            contact.classList.remove('visible-main-card');
+            if (contribute.classList.contains('visible-main-card'))
+                timer = timer + 500;
+            setTimeout(() => contribute.classList.remove('visible-main-card'), timer - 500);
+            setTimeout(() => about.classList.add('visible-main-card'), timer);
+            timer = 0;
+        }, localTimer);
     });
 }
 
 for (let btn of contributeBtns) {
     btn.addEventListener('click', () => {
-    contribute.classList.remove('hidden');
-    home.classList.add('hidden');
-    about.classList.add('hidden');
-    contact.classList.add('hidden');
-    if (contact.classList.contains('visible-main-card'))
-        timer = 500;
-    contact.classList.remove('visible-main-card');
-    setTimeout(() => contribute.classList.add('visible-main-card'), timer);
-    timer = 0;
+        let localTimer = 0;
+        if (test.classList.contains('visible-main-card')) {
+            test.classList.remove('visible-main-card');
+            localTimer = 500;
+        }
+        setTimeout(() => {
+            contribute.classList.remove('hidden');
+            home.classList.add('hidden');
+            about.classList.add('hidden');
+            contact.classList.add('hidden');
+            test.classList.add('hidden');
+            if (contact.classList.contains('visible-main-card'))
+                timer = 500;
+            contact.classList.remove('visible-main-card');
+            setTimeout(() => contribute.classList.add('visible-main-card'), timer);
+            timer = 0;
+        }, localTimer);
     });
 }
 
 for (let btn of contactBtns) {
     btn.addEventListener('click', () => {
-    contact.classList.remove('hidden');
-    home.classList.add('hidden');
-    about.classList.add('hidden');
-    contribute.classList.add('hidden');
-    contact.classList.add('visible-main-card');
+        let localTimer = 0;
+        if (test.classList.contains('visible-main-card')) {
+            test.classList.remove('visible-main-card');
+            localTimer = 500;
+        }
+        setTimeout(() => {
+            contact.classList.remove('hidden');
+            home.classList.add('hidden');
+            about.classList.add('hidden');
+            contribute.classList.add('hidden');
+            contact.classList.add('visible-main-card');
+        }, localTimer);
     });
 }
 
