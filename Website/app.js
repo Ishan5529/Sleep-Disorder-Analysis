@@ -75,7 +75,7 @@ function tabTime() {
 function reset() {
     let localTimer = pageStack.length * 500;
     topBtns[0].click();
-    setTimeout(() => homeBtns[1].click(), localTimer);
+    setTimeout(() => homeBtns[0].click(), localTimer);
 }
 
 for (const card of cards) {
