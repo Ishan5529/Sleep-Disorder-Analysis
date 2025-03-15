@@ -29,6 +29,7 @@ const contactPages = document.getElementsByClassName('contactPage');
 
 // Buttons
 const backBtn = document.getElementById('back');
+const topBtns = document.getElementsByClassName('top');
 const homeBtns = document.getElementsByClassName('home');
 const aboutBtns = document.getElementsByClassName('about');
 const contributeBtns = document.getElementsByClassName('contribute');
@@ -110,6 +111,17 @@ for (let btn of contactBtns) {
 scrollAnimation(aboutPages, about, pageStack);
 scrollAnimation(contributePages, contribute, pageStack);
 scrollAnimation(contactPages, contact, pageStack);
+
+for (let btn of topBtns) {
+    btn.addEventListener('click', () => {
+        timer = 500 * pageStack.length - 500;
+        while (pageStack.length > 0) {
+            let removed = pageStack.shift();
+            setTimeout(() => removed.classList.remove('visible-card'), timer);
+            timer -= 500;
+        }
+    });
+}
 
 // Functions
 function expand(title, text, vidUrl) {
