@@ -297,12 +297,103 @@
             </div> -->
         </div>
         <div id="form">
-            <h1 id="form-title">Enter your details!</h1>
-            <div id="gender">Your Gender?</div>
-            <div id="age">Your Age?</div>
-
+            <div class="form-container">
+                <div class="form-image">
+                    <img class="testimage" src="./sources/image 5.png" alt="Sleep Test">
+                </div>
+                <div class="form-content">
+                    
+                    <form class="sleep-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" required>
+                                    <option value="" selected disabled>Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" min="1" max="120" placeholder="Your age" required>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sleepDuration">Sleep Duration (hours)</label>
+                                <input type="number" id="sleepDuration" min="0" max="24" step="0.5" placeholder="Hours per night" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sleepQuality">Sleep Quality (1-10)</label>
+                                <input type="range" id="sleepQuality" min="1" max="10" step="1" value="5">
+                                <div class="range-value"><span id="sleepQualityValue">5</span>/10</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="physicalActivity">Physical Activity (1-100)</label>
+                                <input type="range" id="physicalActivity" min="1" max="100" value="50">
+                                <div class="range-value"><span id="physicalActivityValue">50</span>/100</div>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="stressLevel">Stress Level (0-10)</label>
+                                <input type="range" id="stressLevel" min="0" max="10" value="5">
+                                <div class="range-value"><span id="stressLevelValue">5</span>/10</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight">Weight (kg)</label>
+                                <input type="number" id="weight" min="1" max="500" step="0.1" placeholder="Weight in kg" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="height">Height (cm)</label>
+                                <input type="number" id="height" min="50" max="250" placeholder="Height in cm" required>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bmiCategory">BMI Category</label>
+                                <select id="bmiCategory">
+                                    <option value="" selected disabled>Select BMI category</option>
+                                    <option value="underweight">Underweight</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="overweight">Overweight</option>
+                                    <option value="obese">Obese</option>
+                                </select>
+                            </div>
+                            <div class="form-group blood-pressure">
+                                <label>Blood Pressure (mmHg)</label>
+                                <div class="bp-inputs">
+                                    <input type="number" id="systolic" min="70" max="220" placeholder="Systolic" required>
+                                    <span>/</span>
+                                    <input type="number" id="diastolic" min="40" max="130" placeholder="Diastolic" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="heartRate">Avg Heart Rate (bpm)</label>
+                                <input type="number" id="heartRate" min="30" max="220" placeholder="Beats per minute" required>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dailySteps">Avg Daily Steps</label>
+                                <input type="number" id="dailySteps" min="0" max="100000" placeholder="Steps per day">
+                            </div>
+                        </div>
+        
+                        <button type="submit" class="submit-btn">Submit Form</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
 
     <script src="app.js"></script>
 </body>

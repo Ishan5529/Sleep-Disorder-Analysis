@@ -243,5 +243,22 @@ function hideLoader() {
         setTimeout(() => {
             loader.style.cssText = "display: none;";
         }, 700);
-    }, 7500);
+    }, 1);
+
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    function updateRangeValue(inputId,valueId){
+        const input = document.getElementById(inputId);
+        const display = document.getElementById(valueId);
+        if(input && display){
+            display.textContent = input.value;
+            input.addEventListener('input', function(){
+                display.textContent = this.value;
+            });
+    }
+}
+updateRangeValue('sleepQuality','sleepQualityValue');
+updateRangeValue('physicalActivity','physicalActivityValue');
+updateRangeValue('stressLevel','stressLevelValue');
+});
