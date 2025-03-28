@@ -39,6 +39,16 @@ const contactBtns = document.getElementsByClassName('contact');
 const testBtns = document.getElementsByClassName('test-btn');
 
 // Event Listeners
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        if (card.classList.contains('visible-card')) {
+            backBtn.click();
+        }
+    }
+    if (event.key === 'Tab') {
+        event.preventDefault();
+    }
+});
 window.onload = () => {
     hideLoader();
 };
@@ -52,7 +62,13 @@ backBtn.addEventListener('click', () => {
 for (let btn of testBtns) {
     btn.addEventListener('click', () => {
         let localTimer = (pageStack.length * 500) + tabTime();
-        reset();
+        if (card.classList.contains('visible-card')) {
+            backBtn.click();
+            localTimer = 500;
+        }
+        else {
+            reset();
+        }
         setTimeout(() => {
             test.classList.remove('hidden');
             home.classList.add('hidden');
@@ -243,7 +259,7 @@ function hideLoader() {
         setTimeout(() => {
             loader.style.cssText = "display: none;";
         }, 700);
-    }, 1);
+    }, 7500);
 
 }
 
